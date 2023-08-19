@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.post.Repository.PostRepository">
+<select id="findAll" resultType="com.example.post.Repository.Post">
+	SELECT * FROM Post
+</select>
+
+<select id="findById" resultType="com.example.post.Repository.Post">
+
+	SELETE * FROM Post Where POSTID =#{postid}
+
+</select>
+
+
+
+
+<insert id="savePost" parameterType="com.example.post.Repository.Post">
+
+INSERT INTO Post(posttitle,postdetail,postdate) 
+
+VALUES(#{posttitle},#{postdetail},#{postdate})
+
+</insert>
+
+<delete id="deletePost">
+	DELETE FROM POST
+	WHERE POSTID = #{postid}
+</delete>
+
+</mapper>
