@@ -16,7 +16,6 @@ public class Post {
 	private int postid;
 	private String posttitle;
 	private String postdetail;
-	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate postdate;
 	
