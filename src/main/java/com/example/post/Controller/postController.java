@@ -38,6 +38,16 @@ public class postController {
 	public void first() {
 		
 	}
+	
+	@RequestMapping("Login.do")
+	public String Login() {
+		
+		System.out.println("로그인동작");
+		
+		
+		return "redirect:/";
+	}
+	
 
 	@RequestMapping("addpost")
 	public ArrayList<Post> AddPost(@RequestBody Post post) {
@@ -60,13 +70,9 @@ public class postController {
 	@RequestMapping("findbyid")
 	public ArrayList<Post> findById(@RequestBody Integer postid){
 		
-		
 		System.out.println(postid);
 		return postService.findbyId(postid);
 		
-		
-		
-	
 	}
 	
 	
